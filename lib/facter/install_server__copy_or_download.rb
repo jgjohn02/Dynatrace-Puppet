@@ -1,4 +1,5 @@
 Facter.add(:install_server__copy_or_download) do
+  confine :kernel => 'Linux'
   setcode do
     result_string = 'not there'
     myfile = '/tmp/dynatrace_server_installation.info'
